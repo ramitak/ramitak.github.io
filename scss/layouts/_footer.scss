@@ -1,0 +1,10 @@
+.rm-footer{
+    background-color: lighten($color_black, 30%);
+    text-align: center;
+    padding: 40px 0;
+    p{
+        color: $color_white;
+        font-size: 14px;
+        margin: 0;
+    }
+}

@@ -1,0 +1,26 @@
+/* Basic colors */
+
+$color_primary  : #ef106e !default;
+$color_secondary  : #f1f1ee !default;
+$color_white      : #fff !default;
+$color_black      : #000 !default;
+$color_tertiary   : #e3a918 !default;
+
+
+
+/*Fonts */
+// $fa-font-path:        "../fonts/webfonts";
+// $font_primary    : 'Rambla';
+$font_title      : 'Josefin Sans', sans-serif;
+$font_primary      : 'Quicksand', sans-serif;
+$font_ternary      : 'Rambla', sans-serif;
+// $font_family      : 'Noto Sans', sans-serif;
+$font_awesome    : 'FontAwesome';
+$font_size       : 16px;
+
+/*Font Weight */
+$font_weight_light    : 300;
+$font_weight_normal   : 400;
+$font_weight_semi-bold : 500;
+$font_weight_bold       : 700;
+$font_weight_bolder    : 900;

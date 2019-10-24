@@ -1,0 +1,17 @@
+.rm-social{
+    ul{
+        margin-bottom: 10px;
+        li{
+            list-style: none;
+            display: inline-block;
+            
+            a{
+                @extend %social-link;
+               i {
+                    font-family: $font_awesome;
+                }
+                
+            }
+        }
+    }
+}

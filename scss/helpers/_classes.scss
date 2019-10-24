@@ -1,0 +1,17 @@
+
+.rm-section{
+    padding: 25px 0;
+}
+
+.rm-title{
+    margin-bottom: 40px;
+    h2{
+        font-size: 25px;
+        font-weight: $font_weight_bold;
+        text-transform: uppercase; 
+    }
+    span{
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}

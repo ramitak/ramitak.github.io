@@ -1,0 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rambla:400,400i,700,700i&display=swap');
+
+body{
+    font-family: $font_primary;
+    color: #6e6c6c;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+
+
+h1,h2,h3,h4{
+    font-family: $font_title ;
+    color: lighten($color_black, 5%);
+}

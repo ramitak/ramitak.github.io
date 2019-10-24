@@ -1,0 +1,33 @@
+#contact{
+    .fm-title{
+        font-family: $font-title;
+        font-weight: $font_weight_bold;
+        h5{
+            font-size: 20px;
+        }
+    }
+    .contact-form{
+        .form-control{
+            border: none;
+            border-bottom: 1px #cecece solid;
+            @include border-radius(0);
+            height: 45px;
+            padding: 15px 8px;
+            @include transition(border 0.2s);
+           
+            &:focus{
+                @include box-shadow(none);
+                border-bottom: 2px #222 solid;
+                
+            }
+
+            &#message{
+                height: 120px;
+            }
+        }
+
+        .send-btn{
+            
+        }
+    }
+}

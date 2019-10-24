@@ -1,0 +1,52 @@
+
+.main-content{
+    width: 80%;
+    float: right;
+    @include transition(all 0.5s ease-in-out);
+
+    .rm-banner {
+         position: relative;
+         background-image: url('../images/prof-banner.jpg');
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: block;
+         height: 100vh;
+         width: 100%;
+         &:after{
+             content: '';
+             background: $color_primary;
+             opacity: 0.75;
+             position: absolute;
+             height: 100%;
+             width: 100%;
+             left: 0;
+             right: 0;
+
+         }
+
+        .text-content{
+            color: $color_white;
+            position: absolute;
+            left: 10%;
+            z-index: 1;
+
+            h1{
+                color: $color_white;
+               
+                span{
+                    color: $color_tertiary;
+                }
+            }
+
+            span{
+                &.rm-post{
+                    font-size: 18px;
+                }
+            }
+        }// text-content
+
+    } // rm-banner
+
+    
+} // main-content
