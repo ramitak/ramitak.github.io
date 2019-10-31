@@ -3,6 +3,9 @@
     width: 80%;
     float: right;
     @include transition(all 0.5s ease-in-out);
+    @include media(xs){
+        width: 100%;
+    }
 
     .rm-banner {
          position: relative;

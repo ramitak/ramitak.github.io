@@ -1,14 +1,28 @@
 .rm-social{
     ul{
         margin-bottom: 10px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         li{
             list-style: none;
             display: inline-block;
             
             a{
+                display: inline-block;
+                @include transition(all 0.2s);
                 @extend %social-link;
                i {
                     font-family: $font_awesome;
+                    @include transition(all 0.2s);
+                }
+
+                &:hover{
+                    padding-bottom: 5px;
+                    i{
+                        color: $color_primary;
+                    }
                 }
                 
             }

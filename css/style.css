@@ -4485,12 +4485,32 @@ h1, h2, h3, h4 {
       width: 170%; }
 
 .rm-social ul {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .rm-social ul li {
     list-style: none;
     display: inline-block; }
-    .rm-social ul li a i {
-      font-family: "FontAwesome"; }
+    .rm-social ul li a {
+      display: inline-block;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      -ms-transition: all 0.2s;
+      -o-transition: all 0.2s;
+      transition: all 0.2s; }
+      .rm-social ul li a i {
+        font-family: "FontAwesome";
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+      .rm-social ul li a:hover {
+        padding-bottom: 5px; }
+        .rm-social ul li a:hover i {
+          color: #ef106e; }
 
 aside {
   background-color: #f1f1ee;
@@ -4499,6 +4519,10 @@ aside {
   height: 100vh;
   padding: 20px;
   position: fixed; }
+  @media (max-width: 767px) {
+    aside {
+      width: 100%;
+      position: relative; } }
   aside header {
     border-bottom: 1px solid;
     border-color: #dadad2 !important;
@@ -4560,7 +4584,10 @@ aside .main-nav ul li {
       aside .main-nav ul li a:hover:after {
         width: 30px; }
 aside .rm-social {
-  margin: 10px 0; }
+  padding: 10px 0;
+  height: 20%;
+  position: absolute;
+  bottom: 0; }
   aside .rm-social a {
     color: #000 !important; }
 
@@ -4568,6 +4595,8 @@ aside .rm-social {
   background-color: #4d4d4d;
   text-align: center;
   padding: 40px 0; }
+  .rm-footer .rm-social {
+    padding: 20px 0; }
   .rm-footer p {
     color: #fff;
     font-size: 14px;
@@ -4581,6 +4610,9 @@ aside .rm-social {
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out; }
+  @media (max-width: 767px) {
+    .main-content {
+      width: 100%; } }
   .main-content .rm-banner {
     position: relative;
     background-image: url("../images/prof-banner.jpg");
@@ -4749,6 +4781,9 @@ aside .rm-social {
 #contact .fm-title {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 700; }
+  @media (max-width: 767px) {
+    #contact .fm-title {
+      margin-top: 20px; } }
   #contact .fm-title h5 {
     font-size: 20px; }
 #contact .contact-form .form-control {

@@ -2,6 +2,9 @@
     .fm-title{
         font-family: $font-title;
         font-weight: $font_weight_bold;
+        @include media(xs){
+            margin-top: 20px;
+        }
         h5{
             font-size: 20px;
         }

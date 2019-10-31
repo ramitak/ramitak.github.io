@@ -7,6 +7,10 @@ aside{
     height: 100vh;
     padding: 20px;
     position: fixed;
+    @include media(xs){
+        width: 100%;
+        position: relative;
+    }
     header{
         border-bottom: 1px solid;
         border-color: darken($color_secondary, 10%) !important;
