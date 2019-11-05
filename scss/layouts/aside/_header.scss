@@ -1,39 +1,141 @@
+body.offcanvas{
+    overflow-x: hidden;
+}
 
-
-aside{
-    background-color: $color_secondary;
-    width: 20%;
-    float: left; 
-    height: 100vh;
-    padding: 20px;
+body.offcanvas #rm-aside {
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    width: 270px;
+    z-index: 999;
     position: fixed;
-    @include media(xs){
-        width: 100%;
-        position: relative;
-    }
-    header{
-        border-bottom: 1px solid;
-        border-color: darken($color_secondary, 10%) !important;
-        text-align: center;
-        padding: 10px 0 20px;
-        margin-bottom: 20px;
+}
 
-        h1{
-        color: $color_white;
+body.offcanvas .main-content, body.offcanvas .menu-nav-toggle {
+    top: 0;
+    -moz-transform: translateX(270px);
+    -webkit-transform: translateX(270px);
+    -ms-transform: translateX(270px);
+    -o-transform: translateX(270px);
+    transform: translateX(270px);
+}
+
+#rm-page{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    .menu-nav-toggle{
+       opacity: 0;
+       visibility: hidden;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        height: 34px;
+        width: 40px;
+        background-color: $color_tertiary;
+        margin: 10px;
         text-align: center;
-        
-            span{
-                background-color: $color_primary;
-                display: inline-block;
-                width: 50px;
-                height: 50px;
-                line-height: 142%;
-                
-                @include border-radius(50%);
-                // @include box-shadow(0);
+        @include transition(0.5s);
+        i{
+            background-color: $color_white;
+            display: inline-block;
+            position: relative;
+            height: 2px;
+            width: 20px;
+            top: 3px;
+            @include transition(all 0.2s ease-out);
+            &:after,
+            &:before{
+                content: '';
+                background-color: $color_white;
+                position: absolute;
+                // top: 0;
+                left: 0;
+                height: 2px;
+                width: 20px;
+                @include transition(0.2s)
+            }
+
+            &:before{
+                top: -9px;
+            }
+
+             &:after{
+                 bottom: -8px;
+             }
+            
+        }
+        &.active{
+            i{
+                background-color: transparent;
+                &:before{
+                    top: 0;
+                    @include transform(rotate(45deg));
+                }
+                &:after{
+                    bottom: 0;
+                    @include transform(rotate(-45deg));
+                }
             }
         }
-
+        @include media(xs){
+            opacity: 1;
+            visibility: visible;
+        }
     }
-    
-}
+
+    aside{
+        background-color: $color_secondary;
+        width: 20%;
+        // float: left; 
+        height: 100vh;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        @include transition( 0.5s);
+        @include media(md){
+            width: 30%;
+        }
+        @include media(xs){
+            // display: none;
+            // width: 100%;
+            width: 270px;
+            -moz-transform: translateX(-270px);
+            -webkit-transform: translateX(-270px);
+            -ms-transform: translateX(-270px);
+            -o-transform: translateX(-270px);
+            transform: translateX(-270px);
+            padding-top: 4em;
+        }
+        header{
+            border-bottom: 1px solid;
+            border-color: darken($color_secondary, 10%) !important;
+            text-align: center;
+            padding: 10px 0 20px;
+            margin-bottom: 20px;
+
+            h1{
+            color: $color_white;
+            text-align: center;
+            
+                span{
+                    background-color: $color_primary;
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 142%;
+                    
+                    @include border-radius(50%);
+                    // @include box-shadow(0);
+                }
+            }
+
+        }
+        
+    }
+ }//rm-page

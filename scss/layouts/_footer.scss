@@ -4,7 +4,14 @@
     padding: 40px 0;
 
     .rm-social{
-        padding: 20px 0;
+        padding: 0;
+        position: static;
+        a{
+            color: $color_white;
+            &:hover{
+                padding-bottom: 0;
+            }
+        }
     }
     p{
         color: $color_white;

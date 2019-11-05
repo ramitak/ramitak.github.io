@@ -1,4 +1,4 @@
-aside{
+
     .main-nav {
         ul{
             li{
@@ -48,8 +48,8 @@ aside{
         position: absolute;
         bottom: 0;
         a{
-            color: $color_black !important;
+            color: $color_black;
         }
         
     }// rm-social
-}// aside
+

@@ -2,7 +2,10 @@
 .main-content{
     width: 80%;
     float: right;
-    @include transition(all 0.5s ease-in-out);
+    @include transition( 0.5s );
+    @include media(md){
+        width: 70%;
+    }
     @include media(xs){
         width: 100%;
     }
@@ -16,6 +19,9 @@
          display: block;
          height: 100vh;
          width: 100%;
+         @include media(xs){
+             min-height: 450px;
+         }
          &:after{
              content: '';
              background: $color_primary;
@@ -33,9 +39,15 @@
             position: absolute;
             left: 10%;
             z-index: 1;
+              @include media(xs) {
+                  left: 12px;
+              }
 
             h1{
                 color: $color_white;
+                @include media(xs) {
+                    font-size: 1.75rem;
+                }
                
                 span{
                     color: $color_tertiary;
