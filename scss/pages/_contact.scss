@@ -2,6 +2,7 @@
     .fm-title{
         font-family: $font-title;
         font-weight: $font_weight_bold;
+        margin-bottom: 20px;
         @include media(xs){
             margin-top: 20px;
         }
@@ -11,7 +12,7 @@
     }
     .contact-form{
         .form-control{
-            border: none;
+            // border: none;
             border-bottom: 1px #cecece solid;
             @include border-radius(0);
             height: 45px;
